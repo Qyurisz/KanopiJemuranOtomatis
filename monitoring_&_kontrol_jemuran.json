@@ -1,0 +1,854 @@
+{
+  "title": "Monitoring & Kontrol Jemuran",
+  "name": "Monitoring & Kontrol Jemuran",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "entityAliases": {
+      "c97b2186-599c-4740-a9d7-85780f2e2e5e": {
+        "id": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+        "alias": "ESP32 Jemuran",
+        "filter": {
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "de0a0740-e821-11f1-ab4e-dfd4fe9de952"
+          },
+          "type": "singleEntity"
+        }
+      }
+    },
+    "filters": {},
+    "widgets": {
+      "1e018d9e-e94f-4c87-a4b4-0b828b867489": {
+        "id": "1e018d9e-e94f-4c87-a4b4-0b828b867489",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Suhu",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "suhu",
+                  "type": "timeseries",
+                  "label": "Suhu",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "centered",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "thermostat",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            }
+          },
+          "units": "°C",
+          "decimals": 1,
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 3
+      },
+      "08af8b86-c9ae-407b-a00b-54cfaf657360": {
+        "id": "08af8b86-c9ae-407b-a00b-54cfaf657360",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Kelembapan",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "kelembapan",
+                  "type": "timeseries",
+                  "label": "Kelembapan",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "centered",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "water_drop",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            }
+          },
+          "units": "%",
+          "decimals": 1,
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 3
+      },
+      "ac06e91a-276b-4ecc-8067-cee250901c89": {
+        "id": "ac06e91a-276b-4ecc-8067-cee250901c89",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Intensitas Cahaya",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "cahaya",
+                  "type": "timeseries",
+                  "label": "Cahaya (LDR)",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "centered",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "light_mode",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            }
+          },
+          "decimals": 0,
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 3
+      },
+      "235fff35-746e-4690-bfab-aca3dcee6856": {
+        "id": "235fff35-746e-4690-bfab-aca3dcee6856",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Sensor Hujan",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "hujan",
+                  "type": "timeseries",
+                  "label": "Kondisi Hujan",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "usePostProcessing": true,
+                  "postFuncBody": "return value > 0 ? 'Hujan (' + value + ')' : 'Tidak Hujan';"
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "centered",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "rainy",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            },
+            "valueColor": {
+              "type": "function",
+              "color": "rgba(0, 0, 0, 0.87)",
+              "colorFunction": "return value > 0 ? '#1E88E5' : '#4CAF50';"
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 3
+      },
+      "da909e3b-cb87-429a-b8db-af3f54e9dccc": {
+        "id": "da909e3b-cb87-429a-b8db-af3f54e9dccc",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Status Atap Jemuran",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "atap_tertutup",
+                  "type": "timeseries",
+                  "label": "Status Atap",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "usePostProcessing": true,
+                  "postFuncBody": "return value ? 'Tertutup' : 'Terbuka';"
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "centered",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "roofing",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            },
+            "valueColor": {
+              "type": "function",
+              "color": "rgba(0, 0, 0, 0.87)",
+              "colorFunction": "return value ? '#F44336' : '#4CAF50';"
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 8,
+        "sizeY": 2
+      },
+      "7980e42e-53be-4042-84e2-b0e8aeb68518": {
+        "id": "7980e42e-53be-4042-84e2-b0e8aeb68518",
+        "type": "rpc",
+        "typeFullFqn": "system.command_button",
+        "config": {
+          "title": "Buka Jemuran",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "padding": "0px",
+          "datasources": [],
+          "targetDevice": {
+            "type": "entity",
+            "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e"
+          },
+          "enableFullscreen": false,
+          "settings": {
+            "appearance": {
+              "type": "filled",
+              "autoScale": true,
+              "showLabel": true,
+              "label": "Buka Manual",
+              "showIcon": true,
+              "icon": "wb_sunny",
+              "iconSize": 24,
+              "iconSizeUnit": "px",
+              "mainColor": "var(--tb-primary-500)",
+              "backgroundColor": "#FFFFFF",
+              "customStyle": {
+                "enabled": null,
+                "hovered": null,
+                "pressed": null,
+                "activated": null,
+                "disabled": null
+              }
+            },
+            "onClickState": {
+              "action": "EXECUTE_RPC",
+              "executeRpc": {
+                "method": "buka",
+                "requestTimeout": 5000,
+                "requestPersistent": false,
+                "persistentPollingInterval": 1000
+              },
+              "setAttribute": {
+                "key": "state",
+                "scope": "SERVER_SCOPE"
+              },
+              "putTimeSeries": {
+                "key": "state"
+              },
+              "valueToData": {
+                "type": "NONE",
+                "constantValue": true,
+                "valueToDataFunction": "/* Convert input value to RPC parameters or attribute/time-series value */\nreturn value;"
+              }
+            },
+            "disabledState": {
+              "action": "DO_NOTHING",
+              "defaultValue": false,
+              "executeRpc": {
+                "method": "getState",
+                "requestTimeout": 5000,
+                "requestPersistent": false,
+                "persistentPollingInterval": 1000
+              },
+              "getAttribute": {
+                "key": "state",
+                "scope": null
+              },
+              "getTimeSeries": {
+                "key": "state"
+              },
+              "getAlarmStatus": {
+                "severityList": null,
+                "typeList": null
+              },
+              "dataToValue": {
+                "type": "NONE",
+                "compareToValue": true,
+                "dataToValueFunction": "/* Should return boolean value */\nreturn data;"
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 8,
+        "sizeY": 2
+      },
+      "e5f27584-756c-4023-a2c9-bceab329b609": {
+        "id": "e5f27584-756c-4023-a2c9-bceab329b609",
+        "type": "rpc",
+        "typeFullFqn": "system.command_button",
+        "config": {
+          "title": "Tutup Jemuran",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "padding": "0px",
+          "datasources": [],
+          "targetDevice": {
+            "type": "entity",
+            "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e"
+          },
+          "enableFullscreen": false,
+          "settings": {
+            "appearance": {
+              "type": "filled",
+              "autoScale": true,
+              "showLabel": true,
+              "label": "Tutup Manual",
+              "showIcon": true,
+              "icon": "roofing",
+              "iconSize": 24,
+              "iconSizeUnit": "px",
+              "mainColor": "var(--tb-primary-500)",
+              "backgroundColor": "#FFFFFF",
+              "customStyle": {
+                "enabled": null,
+                "hovered": null,
+                "pressed": null,
+                "activated": null,
+                "disabled": null
+              }
+            },
+            "onClickState": {
+              "action": "EXECUTE_RPC",
+              "executeRpc": {
+                "method": "tutup",
+                "requestTimeout": 5000,
+                "requestPersistent": false,
+                "persistentPollingInterval": 1000
+              },
+              "setAttribute": {
+                "key": "state",
+                "scope": "SERVER_SCOPE"
+              },
+              "putTimeSeries": {
+                "key": "state"
+              },
+              "valueToData": {
+                "type": "NONE",
+                "constantValue": true,
+                "valueToDataFunction": "/* Convert input value to RPC parameters or attribute/time-series value */\nreturn value;"
+              }
+            },
+            "disabledState": {
+              "action": "DO_NOTHING",
+              "defaultValue": false,
+              "executeRpc": {
+                "method": "getState",
+                "requestTimeout": 5000,
+                "requestPersistent": false,
+                "persistentPollingInterval": 1000
+              },
+              "getAttribute": {
+                "key": "state",
+                "scope": null
+              },
+              "getTimeSeries": {
+                "key": "state"
+              },
+              "getAlarmStatus": {
+                "severityList": null,
+                "typeList": null
+              },
+              "dataToValue": {
+                "type": "NONE",
+                "compareToValue": true,
+                "dataToValueFunction": "/* Should return boolean value */\nreturn data;"
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 8,
+        "sizeY": 2
+      },
+      "60f9dd86-5d4f-4c84-8830-4ba2663ab5c3": {
+        "id": "60f9dd86-5d4f-4c84-8830-4ba2663ab5c3",
+        "type": "timeseries",
+        "typeFullFqn": "system.time_series_chart",
+        "config": {
+          "title": "Tren Suhu & Kelembapan",
+          "showTitle": true,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "suhu",
+                  "type": "timeseries",
+                  "label": "Suhu",
+                  "color": "#2196f3",
+                  "settings": {
+                    "lineSettings": {
+                      "smooth": true
+                    }
+                  },
+                  "units": "°C",
+                  "decimals": 1
+                },
+                {
+                  "name": "kelembapan",
+                  "type": "timeseries",
+                  "label": "Kelembapan",
+                  "color": "#4caf50",
+                  "settings": {
+                    "yAxisId": "hum",
+                    "lineSettings": {
+                      "smooth": true
+                    }
+                  },
+                  "units": "%",
+                  "decimals": 1
+                }
+              ]
+            }
+          ],
+          "useDashboardTimewindow": false,
+          "timewindow": {
+            "selectedTab": 0,
+            "realtime": {
+              "interval": 10000,
+              "timewindowMs": 3600000,
+              "advancedParams": {
+                "lastAggIntervalsConfig": {
+                  "3600000": {
+                    "defaultAggInterval": 10000
+                  },
+                  "21600000": {
+                    "defaultAggInterval": 60000
+                  },
+                  "86400000": {
+                    "defaultAggInterval": 300000
+                  },
+                  "604800000": {
+                    "defaultAggInterval": 1800000
+                  }
+                }
+              },
+              "realtimeType": 0
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "settings": {
+            "dataZoom": false,
+            "showLegend": false,
+            "yAxes": {
+              "default": {
+                "id": "default",
+                "order": 0,
+                "position": "left",
+                "show": true,
+                "label": "Suhu (°C)",
+                "units": "°C"
+              },
+              "hum": {
+                "id": "hum",
+                "order": 1,
+                "position": "right",
+                "show": true,
+                "label": "Kelembapan (%)",
+                "units": "%",
+                "min": 0,
+                "max": 100
+              }
+            }
+          },
+          "displayTimewindow": true,
+          "enableDataExport": true,
+          "tbAiTimeRanges": [
+            "3600000",
+            "21600000",
+            "86400000",
+            "604800000"
+          ],
+          "timewindowStyle": {
+            "showIcon": true,
+            "icon": "date_range",
+            "iconSize": "16px",
+            "iconPosition": "left",
+            "displayTypePrefix": false
+          }
+        },
+        "sizeX": 12,
+        "sizeY": 6
+      },
+      "bc6ad2a5-fff1-48e9-aaa3-666e04e103f2": {
+        "id": "bc6ad2a5-fff1-48e9-aaa3-666e04e103f2",
+        "type": "timeseries",
+        "typeFullFqn": "system.time_series_chart",
+        "config": {
+          "title": "Tren Cahaya & Hujan",
+          "showTitle": true,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "c97b2186-599c-4740-a9d7-85780f2e2e5e",
+              "dataKeys": [
+                {
+                  "name": "cahaya",
+                  "type": "timeseries",
+                  "label": "Cahaya",
+                  "color": "#2196f3",
+                  "settings": {
+                    "lineSettings": {
+                      "smooth": true
+                    }
+                  },
+                  "decimals": 0
+                },
+                {
+                  "name": "hujan",
+                  "type": "timeseries",
+                  "label": "Hujan",
+                  "color": "#4caf50",
+                  "settings": {
+                    "yAxisId": "rain"
+                  },
+                  "decimals": 0
+                }
+              ]
+            }
+          ],
+          "useDashboardTimewindow": false,
+          "timewindow": {
+            "selectedTab": 0,
+            "realtime": {
+              "interval": 10000,
+              "timewindowMs": 3600000,
+              "advancedParams": {
+                "lastAggIntervalsConfig": {
+                  "3600000": {
+                    "defaultAggInterval": 10000
+                  },
+                  "21600000": {
+                    "defaultAggInterval": 60000
+                  },
+                  "86400000": {
+                    "defaultAggInterval": 300000
+                  },
+                  "604800000": {
+                    "defaultAggInterval": 1800000
+                  }
+                }
+              },
+              "realtimeType": 0
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "settings": {
+            "dataZoom": false,
+            "showLegend": false,
+            "yAxes": {
+              "default": {
+                "id": "default",
+                "order": 0,
+                "position": "left",
+                "show": true,
+                "label": "Cahaya"
+              },
+              "rain": {
+                "id": "rain",
+                "order": 1,
+                "position": "right",
+                "show": true,
+                "label": "Hujan"
+              }
+            }
+          },
+          "displayTimewindow": true,
+          "enableDataExport": true,
+          "tbAiTimeRanges": [
+            "3600000",
+            "21600000",
+            "86400000",
+            "604800000"
+          ],
+          "timewindowStyle": {
+            "showIcon": true,
+            "icon": "date_range",
+            "iconSize": "16px",
+            "iconPosition": "left",
+            "displayTypePrefix": false
+          }
+        },
+        "sizeX": 12,
+        "sizeY": 6
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Monitoring & Kontrol Jemuran",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "1e018d9e-e94f-4c87-a4b4-0b828b867489": {
+                "sizeX": 6,
+                "sizeY": 3,
+                "row": 0,
+                "col": 0
+              },
+              "08af8b86-c9ae-407b-a00b-54cfaf657360": {
+                "sizeX": 6,
+                "sizeY": 3,
+                "row": 0,
+                "col": 6
+              },
+              "ac06e91a-276b-4ecc-8067-cee250901c89": {
+                "sizeX": 6,
+                "sizeY": 3,
+                "row": 0,
+                "col": 12
+              },
+              "235fff35-746e-4690-bfab-aca3dcee6856": {
+                "sizeX": 6,
+                "sizeY": 3,
+                "row": 0,
+                "col": 18
+              },
+              "da909e3b-cb87-429a-b8db-af3f54e9dccc": {
+                "sizeX": 8,
+                "sizeY": 2,
+                "row": 3,
+                "col": 0
+              },
+              "7980e42e-53be-4042-84e2-b0e8aeb68518": {
+                "sizeX": 8,
+                "sizeY": 2,
+                "row": 3,
+                "col": 8
+              },
+              "e5f27584-756c-4023-a2c9-bceab329b609": {
+                "sizeX": 8,
+                "sizeY": 2,
+                "row": 3,
+                "col": 16
+              },
+              "60f9dd86-5d4f-4c84-8830-4ba2663ab5c3": {
+                "sizeX": 12,
+                "sizeY": 6,
+                "row": 5,
+                "col": 0
+              },
+              "bc6ad2a5-fff1-48e9-aaa3-666e04e103f2": {
+                "sizeX": 12,
+                "sizeY": 6,
+                "row": 5,
+                "col": 12
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": true
+            }
+          }
+        }
+      }
+    },
+    "timewindow": {
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "timewindowMs": 3600000
+      },
+      "aggregation": {
+        "type": "NONE",
+        "limit": 50000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    },
+    "additionalInfo": {
+      "aiUpdated": true,
+      "aiUpdateTs": 1795538270868,
+      "aiUpdatedBy": [
+        "AI Assistant"
+      ]
+    }
+  },
+  "resources": []
+}
